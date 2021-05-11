@@ -1,0 +1,24 @@
+@using CarsList.Models;
+
+<h1>Car List</h1>
+
+@if (Model.Count == 0)
+{
+  <p>There are no cars in the list.</p>
+}
+<ul>
+  @foreach (Car car in Model)
+  {
+    <div id="@car.Make">
+      <li>Make: @car.Make</li>
+    </div>
+    <div id="@car.Make toggle">
+      <li>Description: @car.Description</li>
+      <li>Price: @car.Price</li>
+      <li>Year: @car.Year</li><br>
+    </div>
+  }
+</ul>
+<a href="/cars/new">Add a new car.</a>
+
+Invoke_Test_Instance.driver.findElement(By.cssSelector(id + " > div:nth-child(1) > div:nth-child(1) > form:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > input:nth-child(2)")).sendKeys("input value"
